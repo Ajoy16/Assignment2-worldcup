@@ -8,11 +8,14 @@ main{
     flex-direction: column;
     align-items: center;
     padding-top: 50px;
+    row-gap: 100px;
+
 }
+
 h1{
     font-size: 70px;
     line-height: 80px;
-    color: blue;
+    color:#FFFFFF;
 }
 p{
     height: 78px;
@@ -30,12 +33,11 @@ p{
     width: 187px;
     height: 56px;
     border-radius: 5px;
-    background-color: darkgoldenrod;
+    background-color:lime;
 }
 .top-banner{
     background-color:#161616;
-    display: grid;
-    grid-template-columns: repeat(2 , 1fr);
+    display: flex;
     align-items: center;
     height: 646px;
     width: 1321px;
@@ -47,11 +49,18 @@ p{
     height: 660px;
    
 }
+.football{
+    display: flex;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap:15px ;
+    padding-left: 20px;
+}
 .boxes{
     height: 312px;
-    width: 312px;
+    width: 305px;
     background-color:#161616 ;  
     border-radius: 10px;
+    padding-right: 30px;
 }
 .size{
     display: grid;
@@ -61,7 +70,8 @@ p{
     padding-top: 30px;
 
 }
-.group, .blog{
+
+.group{
     text-decoration: none;
     font-size: 20px;
     width: 252px;
@@ -69,19 +79,28 @@ p{
     border-radius: 5px;
     background-color: chartreuse;
 }
+.blog{
+    text-decoration: none;
+    font-size: 20px;
+    width: 252px;
+    height: 65px;
+    border-radius: 5px;
+    background-color: red;
+}
 .leva img{
-    height: 240px;
-    width: 440px;
+    height: 175px;
+    width: 310px;
     border-radius: 10px;
 }
 .transfer{
     background-color: #f4eaea;
     border: 1px solid white ;
-    border-radius: 10px
+    border-radius: 5px
 }
 .transfers{
     display: grid;
     grid-template-columns: repeat(3 , 1fr);
+    grid-column-gap:14px ;
     grid-row-gap:20px;
 }
 
@@ -104,5 +123,74 @@ h2{
     align-items: center;
     gap: 30px;
 }
+   /* footer */
+.inner-footer{
+    background-color: #161616;
 
+}
+
+h3{
+    color: #FFFFFF;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 130px;
+}
+.outer-footer{
+    display: flex;   
+    align-items: center;
+    padding-left: 60px;
+    padding-top: 50px;
+
+}
+.social-link{
+    display: flex;
+    justify-content: center;
+} 
+.social-item a{
+    padding: 20px 20px;
+    font-size: 70px;
+    color: chartreuse;
+}
+/* media section */
+@media screen and ( max-width:688px) {
+    .top-place{
+        width: 100%;
+    }
+     .top-banner{
+     flex-direction: column;
+     height: 472px;
+     width: 334px;
+     }
+     .title{
+        height: 178px;
+        width: 258px;
+     }
+     h1{
+        font-size: 22px;
+        line-height: 30px;
+        padding-top:15px ;
+     }
+     p{
+        height: 48px;
+        width: 258px;
+        font-size: 10px;
+     }
+     .button{
+        height: 20px;
+        width: 140px;
+        border-radius: 5px;
+        padding-bottom: 20px;
+     }
+     .banner img{
+        height: 245px;
+        width: 233px;
+     }
+     .top-banner,.boxes,.transfers{
+        grid-template-columns: repeat(1, 1fr);
+     }
+    .football{
+        flex-direction: column;
+    }
+    
+}
 
